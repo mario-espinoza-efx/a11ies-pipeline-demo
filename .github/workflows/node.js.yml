@@ -1,5 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
 defaults:
   run:
     working-directory: web
@@ -7,9 +6,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master, e2e** ]
+    branches: [ master, dev ]
   pull_request:
-    branches: [ master, e2e** ]
+    branches: [ master, dev ]
 
 jobs:
   build:
@@ -29,8 +28,4 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: npx ng serve &
-    - run: npx wait-on http://localhost:4200 && cd e2e
-    - run: npx webdriver-manager update
-    - run: npx protractor protractor.conf.js
-      
+    - run: ./scripts/e2e.sh
