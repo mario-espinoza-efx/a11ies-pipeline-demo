@@ -1,3 +1,5 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 defaults:
   run:
@@ -17,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [10.x, 12.x, 14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -27,13 +29,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-<<<<<<< HEAD
-    - run: npm run test:headless
-    - run: sh ./scripts/e2e.sh
-=======
-    - run: npx ng serve &
-    - run: npx wait-on http://localhost:4200 && cd e2e
-    - run: npx webdriver-manager update
-    - run: npx protractor protractor.conf.js
->>>>>>> 209feb5aec7f6a02c441d32a126a146618dc6547
-      
+    - run: npm test
+    - run: ./scripts/e2e.sh
