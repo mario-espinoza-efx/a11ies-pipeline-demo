@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "test:headless": "npx ng test --browsers=ChromeHeadless --code-coverage --watch=false"
   },
   "private": true,
   "dependencies": {
@@ -68,5 +69,8 @@
     "typescript": "3.7.5",
     "protractor-cucumber-framework": "^6.2.1",
     "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
