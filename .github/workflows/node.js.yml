@@ -7,9 +7,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master, e2e** ]
+    branches: [ master, e2e**, dev ]
   pull_request:
-    branches: [ master, e2e** ]
+    branches: [ master, e2e**, dev ]
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -29,8 +29,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: npx ng serve &
-    - run: npx wait-on http://localhost:4200 && cd e2e
-    - run: npx webdriver-manager update
-    - run: npx protractor protractor.conf.js
+    - run: ./scripts/e2e.sh
       
