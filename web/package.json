@@ -3,6 +3,7 @@
   "version": "2.1.0",
   "license": "MIT",
   "scripts": {
+<<<<<<< HEAD
     "ng": "npx ng",
     "start": "npx ng serve -o",
     "build": "npx ng build",
@@ -10,6 +11,16 @@
     "lint": "npx ng lint",
     "e2e": "cd e2e && npx webdriver-manager update && npx protractor protractor.conf.js",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+=======
+    "ng": "ng",
+    "start": "ng serve -o",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "test:headless": "npx ng test --browsers=ChromeHeadless --code-coverage --watch=false"
+>>>>>>> 24b9385158445ff8fd3c6359e8124cc54f3d203d
   },
   "private": true,
   "dependencies": {
@@ -70,5 +81,8 @@
     "typescript": "3.7.5",
     "protractor-cucumber-framework": "^6.2.1",
     "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

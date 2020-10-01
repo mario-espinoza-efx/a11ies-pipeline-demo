@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
+import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -14,11 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
-  declarations: [
-    DashboardComponent
-  ]
+  declarations: [DashboardComponent],
 })
-
 export class AdminLayoutModule {}
