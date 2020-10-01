@@ -3,24 +3,14 @@
   "version": "2.1.0",
   "license": "MIT",
   "scripts": {
-<<<<<<< HEAD
+    "build": "npx ng build",
+    "e2e": "npx ng e2e",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "lint": "npx ng lint",
     "ng": "npx ng",
     "start": "npx ng serve -o",
-    "build": "npx ng build",
-    "test": "npx ng test",
-    "lint": "npx ng lint",
-    "e2e": "cd e2e && npx webdriver-manager update && npx protractor protractor.conf.js",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
-=======
-    "ng": "ng",
-    "start": "ng serve -o",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "test:headless": "npx ng test --browsers=ChromeHeadless --code-coverage --watch=false"
->>>>>>> 24b9385158445ff8fd3c6359e8124cc54f3d203d
+    "test:headless": "npx ng test --browsers=ChromeHeadless --code-coverage --watch=false",
+    "test": "npx ng test"
   },
   "private": true,
   "dependencies": {
