@@ -1,29 +1,35 @@
-
 <div class="sidebar-wrapper">
   <div class="logo">
     <a href="#" class="simple-text logo-mini">
       <div class="sr-only">Oscorp</div>
       <div class="logo-image-small">
-        <img src="assets/img/oscorp.png">
+        <!-- To Demo <img src="assets/img/oscorp.png" alt="Oscorp Brand" /> -->
+        <img src="assets/img/oscorp.png" alt="Oscorp Brand" />
       </div>
     </a>
-    <a href="#" class="simple-text logo-normal">
-      Oscorp
-    </a>
+    <a href="#" class="simple-text logo-normal"> Oscorp </a>
   </div>
-    <ul class="nav">
-        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
-            <a [routerLink]="[menuItem.path]">
-                <i class="nc-icon {{menuItem.icon}}"></i>
-                <p>{{menuItem.title}}</p>
-            </a>
-        </li>
+  <ul class="nav">
+    <li
+      *ngFor="let menuItem of menuItems"
+      routerLinkActive="active"
+      class="{{ menuItem.class }}"
+    >
+      <a [routerLink]="[menuItem.path]">
+        <i class="nc-icon {{ menuItem.icon }}"></i>
+        <p>{{ menuItem.title }}</p>
+      </a>
+    </li>
 
-        <li *ngFor="let menuItem of links" routerLinkActive="active" class="{{menuItem.class}}">
-          <a href="#">
-              <i class="nc-icon {{menuItem.icon}}"></i>
-              <p>{{menuItem.title}}</p>
-          </a>
-      </li>
-    </ul>
+    <li
+      *ngFor="let menuItem of links"
+      routerLinkActive="active"
+      class="{{ menuItem.class }}"
+    >
+      <a href="#">
+        <i class="nc-icon {{ menuItem.icon }}"></i>
+        <p>{{ menuItem.title }}</p>
+      </a>
+    </li>
+  </ul>
 </div>
