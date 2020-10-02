@@ -33,6 +33,7 @@ exports.config = {
       args: [
         ' —-headless',
         '--no-sandbox',
+        '--single-process',
         ' —-disable-gpu',
         '--remote-debugging-port=9222',
       ],
