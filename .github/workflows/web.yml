@@ -21,6 +21,8 @@ jobs:
         node-version: [14.x]
 
     steps:
+      - name: Start selenoid
+        uses: Xotabu4/selenoid-github-action@v1
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -30,7 +32,4 @@ jobs:
       - run: npm run build --if-present
       - run: npm run test:headless
       - run: npm run webdriver-update
-      - name: Start selenoid
-        uses: Xotabu4/selenoid-github-action@v1
-      - uses: actions/checkout@v1
       - run: npm run protractor
