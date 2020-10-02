@@ -3,24 +3,19 @@
   "version": "2.1.0",
   "license": "MIT",
   "scripts": {
-<<<<<<< HEAD
     "ng": "npx ng",
-    "start": "npx ng serve -o",
     "build": "npx ng build",
-    "test": "npx ng test",
+    "start": "npx ng serve -o",
     "lint": "npx ng lint",
-    "e2e": "cd e2e && npx webdriver-manager update && npx protractor protractor.conf.js",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
-=======
-    "ng": "ng",
-    "start": "ng serve -o",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "test:headless": "npx ng test --browsers=ChromeHeadless --code-coverage --watch=false"
->>>>>>> 24b9385158445ff8fd3c6359e8124cc54f3d203d
+    "test": "npx ng test",
+    "test:ci": "npx ng test --watch=false",
+    "test:headless": "npx ng test --browsers=ChromeHeadless --code-coverage --watch=false",
+    "e2e": "npx ng e2e",
+    "webdriver-start": "webdriver-manager start &",
+    "webdriver-update": "webdriver-manager update",
+    "protractor": "npx protractor e2e/protractor.conf.js",
+    "ci-e2e": "protractor --capabilities.chromeOptions.args=--headless --capabilities.chromeOptions.args=--no-sandbox e2e/protractor.conf.js"
   },
   "private": true,
   "dependencies": {
