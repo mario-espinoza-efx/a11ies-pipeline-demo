@@ -2,7 +2,7 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
-const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
+const { SpecReporter } = require('jasmine-spec-reporter');
 
 // Use this — interprets .ts as .js
 require('ts-node').register({ project: './e2e/tsconfig.e2e.json' });
@@ -26,6 +26,10 @@ exports.config = {
   specs: [
     './features/**.feature', // accepts a glob
   ],
+
+  hostname: 'localhost',
+  port: 4444,
+  path: '/wd/hub',
 
   capabilities: {
     browserName: 'chrome',
