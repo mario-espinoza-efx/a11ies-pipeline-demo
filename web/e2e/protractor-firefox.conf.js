@@ -26,17 +26,9 @@ exports.config = {
   ],
 
   capabilities: {
-    browserName: 'chrome',
+    browserName: 'firefox',
     firefoxOptions: {
       args: ['--headless'],
-    },
-    chromeOptions: {
-      args: [
-        ' —-headless',
-        ' —-disable-gpu',
-        '--no-sandbox',
-        '--remote-debugging-port=9222',
-      ],
     },
   },
   directConnect: true,
