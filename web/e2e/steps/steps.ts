@@ -30,7 +30,7 @@ Then('The page should be accessible', async () => {
   /** Available tags: wcag2a, wcag2aa, wcag21a, wcag21aa,
    * section508, best-practice, experimental, cat.
    */
-  const results = await axe(browser.driver).analyze();
+  const results = await axe(browser.driver).withTags(['wcag2a']).analyze();
 
   /** Check the results for violations. If there are any, indicate
    * what they are.
