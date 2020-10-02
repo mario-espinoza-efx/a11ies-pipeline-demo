@@ -5,7 +5,7 @@
 const { SpecReporter, StacktraceOption } = require("jasmine-spec-reporter");
 
 // Use this — interprets .ts as .js
-require("ts-node").register({ project: "./tsconfig.json" });
+require("ts-node").register({ project: "./e2e/tsconfig.e2e.json" });
 
 // Needed for cucumber html reporting
 const reporter = require("cucumber-html-reporter");
@@ -24,7 +24,7 @@ exports.config = {
 
   // Require feature files
   specs: [
-    "./features/**/*.feature", // accepts a glob
+    "./features/**.feature", // accepts a glob
   ],
 
   capabilities: {
@@ -38,7 +38,7 @@ exports.config = {
 
   cucumberOpts: {
     // This is where the results are stored
-    format: ["json:./reports/results.json"],
+    format: ["json:./e2e/reports/results.json"],
     // Requires these files on test launch
     require: ["./steps/*.ts"],
     timeout: 20000,
@@ -50,8 +50,8 @@ exports.config = {
     const options = {
       columnLayout: 1,
       theme: "bootstrap",
-      jsonFile: "./reports/results.json",
-      output: "./reports/cucumber_report.html",
+      jsonFile: "./e2e/reports/results.json",
+      output: "./e2e/reports/cucumber_report.html",
       reportSuiteAsScenarios: true,
       scenarioTimestamp: true,
       launchReport: true,
