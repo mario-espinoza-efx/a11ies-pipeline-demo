@@ -14,7 +14,7 @@
     "e2e": "npx ng e2e",
     "webdriver-start": "webdriver-manager start &",
     "webdriver-update": "webdriver-manager update",
-    "protractor": "protractor",
+    "protractor": "npx protractor e2e/protractor.conf.js",
     "ci-e2e": "protractor --capabilities.chromeOptions.args=--headless --capabilities.chromeOptions.args=--no-sandbox e2e/protractor.conf.js"
   },
   "private": true,
