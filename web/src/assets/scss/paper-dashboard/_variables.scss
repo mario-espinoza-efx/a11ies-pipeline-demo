@@ -4,8 +4,8 @@
 
 $font-color: #000000 !default;
 $fill-font-color: rgba(255, 255, 255, 0.8);
-$font-family-sans-serif: "Montserrat", "Helvetica", Arial, sans-serif;
-$sans-serif-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: 'Montserrat', 'Helvetica', Arial, sans-serif;
+$sans-serif-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 
 $none: 0 !default;
 $border-thin: 1px !default;
@@ -30,7 +30,7 @@ $medium-gray: #dddddd !default;
 // TO DEMO:
 // GOOD $dark-gray:                  #000000 !default;
 // BAD $dark-gray:                  #acacac !default;
-$dark-gray: #acacac !default;
+$dark-gray: #000000 !default;
 
 $table-line-color: #ccc !default;
 $muted-color: #a49e93 !default;
@@ -332,7 +332,7 @@ $bottombar-back: bottombar-back !default;
 
 //Nucleo Icons
 
-$nc-font-path: "../fonts" !default;
+$nc-font-path: '../fonts' !default;
 $nc-font-size-base: 14px !default;
 $nc-css-prefix: nc !default;
 $nc-background-color: #eee !default;
