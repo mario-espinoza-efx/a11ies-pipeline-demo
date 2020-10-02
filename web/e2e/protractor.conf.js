@@ -25,14 +25,15 @@ exports.config = {
     './features/**.feature', // accepts a glob
   ],
 
-  hostname: 'localhost',
-  port: 4444,
-  path: '/wd/hub',
-
   capabilities: {
-    browserName: 'chrome',
+    browserName: 'firefox',
     chromeOptions: {
-      args: [' —-headless', ' —-disable-gpu', '--remote-debugging-port=9222'],
+      args: [
+        ' —-headless',
+        ' —-disable-gpu',
+        '--no-sandbox',
+        '--remote-debugging-port=9222',
+      ],
     },
   },
   directConnect: true,
