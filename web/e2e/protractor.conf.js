@@ -26,18 +26,20 @@ exports.config = {
   ],
 
   capabilities: {
-    browserName: 'firefox',
+    browserName: 'chrome',
+    /* 
     firefoxOptions: {
       args: ['--headless'],
     },
-    /* chromeOptions: {
+    */
+    chromeOptions: {
       args: [
         ' —-headless',
         ' —-disable-gpu',
         '--no-sandbox',
         '--remote-debugging-port=9222',
       ],
-    },*/
+    },
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
